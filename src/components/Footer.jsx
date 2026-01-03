@@ -22,9 +22,9 @@ const Footer = () => {
             </p>
 
             <div className="social-links">
-              <a href="#"><img src={facebook_icon} /></a>
-              <a href="#"><img src={twitter_icon} /></a>
-              <a href="#"><img src={linkedin_icon} /></a>
+              <a href="#" className="social-icon"><img src={facebook_icon} /></a>
+              <a href="#" className="social-icon"><img src={twitter_icon} /></a>
+              <a href="#" className="social-icon"><img src={linkedin_icon} /></a>
             </div>
           </div>
 
