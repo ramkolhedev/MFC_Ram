@@ -1,9 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './Footer.css';
-import About from "./components/About";
-import Contact from "./components/Contact";
-
 import linkedin_icon from "../assets/linkedin_icon.png";
 import facebook_icon from "../assets/facebook_icon.png";
 import twitter_icon from "../assets/twitter_icon.png";
@@ -43,8 +39,8 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4>Company</h4>
                         <ul className="footer-links">
-                            <li><a href="/About">About Us</a></li>
-                            <li><a href="/Contact">Contact</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact">Contact</a></li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
