@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient Transition Layer */
+.gradient-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  transition: all 0.6s ease-in-out;
+  filter: brightness(0.95);
+}
+
+/* Product Image */
+.hero-img {
+  position: relative;
+  z-index: 3;
+  display: block;
+  margin: 0 auto;
+  top: 18%;
+  filter: drop-shadow(0px 40px 80px rgba(0, 0, 0, 0.6));
+  transition: transform 0.6s ease-in-out;
+}
+
+.hero-img:hover {
+  transform: scale(1.02);
+}
+
+/* Floating Background Shapes */
+.bg {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.35;
+  filter: blur(2px);
+}
+
+/* Text Styling */
+.hero-content {
+  position: absolute;
+  top: 25%;
+  left: 7%;
+  z-index: 4;
+  color: white;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.drink-title {
+  font-size: 3rem;
+  font-weight: 800;
+
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Science Gothic",
+    sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt"0,
+    "wdth"100,
+    "CTRS"0;
+}
+
+.drink-subtext {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffcccb;
+  margin-top: -0.4rem;
+  font-family: "Science Gothic",
+    sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt"0,
+    "wdth"100,
+    "CTRS"0;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f2f2f2;
+  opacity: 0.95;
+  font-family: "Science Gothic",
+    sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt"0,
+    "wdth"100,
+    "CTRS"0;
+}
+
+/* Background Word */
+.drink-bg-word {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(255, 225, 255, 0.12);
+  z-index: 1;
+  letter-spacing: 20px;
+  user-select: none;
+  text-transform: uppercase;
+  /* font-family: 'Anton', sans-serif; */
+  white-space: nowrap;
+  font-family: "Science Gothic",
+    sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "slnt"0,
+    "wdth"100,
+    "CTRS"0;
+}
+
+/* Arrows */
+.arrows {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2.5rem;
+  z-index: 5;
+}
+
+.arrow {
+  height: 55px;
+  width: 55px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #541212;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #541212;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ffeb3b, #ff9800, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 2px;
+  z-index: 10;
+  user-select: none;
+}

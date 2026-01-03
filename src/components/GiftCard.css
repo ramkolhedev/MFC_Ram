@@ -1,0 +1,1029 @@
+/* GiftCard.css - Modern Stylish Design */
+
+:root {
+    --primary: #b3010a;
+    --secondary: #d0021b;
+    --accent: #ff6b3d;
+    --dark: #0a0a0a;
+    --light: #fafafa;
+    --text: #222;
+    --gray: #666;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gift-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--light) 0%, #f0f0f0 100%);
+    padding-top: 120px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/* Decorative background elements */
+.gift-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 10% 50%, rgba(179, 1, 10, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(208, 2, 27, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.gift-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(255, 107, 61, 0.1), transparent);
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.gift-wrapper>* {
+    width: 90%;
+    max-width: 1300px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========== HEADER SECTION ========== */
+
+.gift-header {
+    text-align: center;
+    padding: 50px 30px 100px 30px;
+    animation: slideDown 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gift-header .title {
+    font-size: 64px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    text-shadow: 0 4px 20px rgba(179, 1, 10, 0.1);
+    font-size: 3rem;
+    font-weight: 800;
+
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    font-family: "Science Gothic",
+        sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "slnt"0,
+        "wdth"100,
+        "CTRS"0;
+}
+
+.gift-header .subtitle {
+    font-size: 22px;
+    color: var(--gray);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    animation: fadeIn 0.9s ease-out 0.3s backwards;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcccb;
+    margin-top: -0.4rem;
+    font-family: "Science Gothic",
+        sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "slnt"0,
+        "wdth"100,
+        "CTRS"0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ========== GIFT CARDS GRID ========== */
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 45px;
+    margin-bottom: 100px;
+    animation: fadeIn 0.9s ease-out 0.2s backwards;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcccb;
+    margin-top: -0.4rem;
+    font-family: "Science Gothic",
+        sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "slnt"0,
+        "wdth"100,
+        "CTRS"0;
+}
+
+.gift-card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 28px;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    animation: scaleUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.gift-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.gift-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.gift-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Shimmer effect on hover */
+.gift-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.7s ease;
+    z-index: 2;
+}
+
+.gift-card:hover::before {
+    left: 100%;
+}
+
+.gift-card:hover {
+    transform: translateY(-16px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(179, 1, 10, 0.2);
+    border-color: var(--primary);
+}
+
+.gift-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.gift-card:hover img {
+    transform: scale(1.12) rotate(2deg);
+}
+
+.gift-card h3 {
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.gift-card p {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 28px;
+    flex-grow: 1;
+    line-height: 1.7;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.gift-card button {
+    padding: 15px 32px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    align-self: flex-start;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 12px 30px rgba(179, 1, 10, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    overflow: hidden;
+}
+
+.gift-card button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.gift-card button:hover::after {
+    width: 400px;
+    height: 400px;
+}
+
+.gift-card button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(179, 1, 10, 0.45);
+}
+
+.gift-card button:active {
+    transform: translateY(-1px);
+}
+
+/* ========== HOW IT WORKS SECTION ========== */
+
+.steps {
+    background: linear-gradient(135deg, var(--white) 0%, #f8f8f8 100%);
+    padding: 100px 60px;
+    border-radius: 32px;
+    border: 2px solid rgba(179, 1, 10, 0.12);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    animation: fadeUp 0.9s ease-out;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffcccb;
+    margin-top: -0.4rem;
+    font-family: "Science Gothic",
+        sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "slnt"0,
+        "wdth"100,
+        "CTRS"0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.steps::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(179, 1, 10, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.steps::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 5%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(208, 2, 27, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.steps h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.step-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.step-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(179, 1, 10, 0.04), rgba(208, 2, 27, 0.02));
+    border: 2px solid rgba(179, 1, 10, 0.12);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.step-box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.step-box:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.step-box:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7) rotateY(20deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0);
+    }
+}
+
+.step-box:hover {
+    transform: translateY(-12px);
+    border-color: var(--secondary);
+    background: linear-gradient(135deg, rgba(179, 1, 10, 0.08), rgba(208, 2, 27, 0.05));
+    box-shadow: 0 15px 45px rgba(179, 1, 10, 0.2);
+}
+
+.step-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 35px rgba(179, 1, 10, 0.35);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+.step-box:hover span {
+    transform: scale(1.2) rotate(12deg);
+    box-shadow: 0 18px 50px rgba(179, 1, 10, 0.5);
+}
+
+.step-box p {
+    font-size: 18px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1024px) {
+    .gift-header .title {
+        font-size: 48px;
+    }
+
+    .steps {
+        padding: 70px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gift-wrapper {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .gift-header {
+        padding: 30px 20px 60px 20px;
+    }
+
+    .gift-header .title {
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+
+    .gift-header .subtitle {
+        font-size: 18px;
+    }
+
+    .gift-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .gift-card {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .gift-card img {
+        height: 200px;
+        border-radius: 14px;
+    }
+
+    .gift-card h3 {
+        font-size: 22px;
+    }
+
+    .gift-card button {
+        padding: 12px 24px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+
+    .steps {
+        padding: 50px 25px;
+        border-radius: 24px;
+    }
+
+    .steps h2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    .step-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .step-box {
+        padding: 30px 20px;
+        border-radius: 18px;
+    }
+
+    .step-box span {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+
+    .step-box p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-wrapper {
+        padding-top: 90px;
+    }
+
+    .gift-header .title {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    .gift-header .subtitle {
+        font-size: 15px;
+    }
+
+    .gift-card {
+        padding: 18px;
+    }
+
+    .gift-card img {
+        height: 160px;
+    }
+
+    .gift-card h3 {
+        font-size: 18px;
+    }
+
+    .steps h2 {
+        font-size: 26px;
+    }
+
+    .step-box {
+        padding: 20px 15px;
+    }
+
+    .step-box span {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+}
+
+.gift-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: #0a0a0a;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.gift-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(179, 1, 10, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(208, 2, 27, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.gift-wrapper>* {
+    width: 90%;
+    max-width: 1300px;
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADER */
+
+.gift-header {
+    text-align: center;
+    padding: 40px 0 80px 0;
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gift-header .title {
+    font-size: 58px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.gift-header .subtitle {
+    font-size: 20px;
+    color: var(--gray);
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* GRID */
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+    background: linear-gradient(135deg, rgba(255, 107, 61, 0.1), rgba(255, 107, 61, 0.05));
+
+}
+
+.gift-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 24px;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.gift-card,
+.gift-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.gift-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.gift-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.gift-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gift-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.gift-card:hover::before {
+    left: 100%;
+}
+
+.gift-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(179, 1, 10, 0.15);
+    border-color: var(--primary);
+}
+
+.gift-card img {
+    width: 100%;
+    border-radius: 16px;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 24px;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.gift-card:hover img {
+    transform: scale(1.08);
+}
+
+.gift-card h3 {
+    font-size: 24px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.gift-card p {
+    font-size: 16px;
+    color: var(--gray);
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.gift-card button {
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    align-self: flex-start;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(179, 1, 10, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gift-card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(179, 1, 10, 0.4);
+}
+
+.gift-card button:active {
+    transform: translateY(-1px);
+}
+
+/* HOW IT WORKS SECTION */
+
+.steps {
+    background: linear-gradient(135deg, rgba(255, 107, 61, 0.1), rgba(255, 107, 61, 0.05));
+    padding: 80px 50px;
+    border-radius: 28px;
+    border: 2px solid rgba(179, 1, 10, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    animation: slideUp 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.steps::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(179, 1, 10, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.steps h2 {
+    text-align: center;
+    font-size: 42px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    margin: 0 0 60px 0;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.step-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.step-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(179, 1, 10, 0.03), rgba(208, 2, 27, 0.02));
+    border: 2px solid rgba(179, 1, 10, 0.1);
+    transition: all 0.4s ease;
+    animation: scaleIn 0.6s ease-out backwards;
+}
+
+.step-box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.step-box:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.step-box:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.step-box:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    background: linear-gradient(135deg, rgba(179, 1, 10, 0.08), rgba(208, 2, 27, 0.05));
+    box-shadow: 0 10px 30px rgba(179, 1, 10, 0.15);
+}
+
+.step-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(179, 1, 10, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.step-box:hover span {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 12px 35px rgba(179, 1, 10, 0.4);
+}
+
+.step-box p {
+    font-size: 18px;
+    color: var(--text);
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .gift-wrapper {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .gift-header {
+        padding: 30px 0 60px 0;
+    }
+
+    .gift-header .title {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+
+    .gift-header .subtitle {
+        font-size: 16px;
+        margin-top: 12px;
+    }
+
+    .gift-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .gift-card {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .gift-card img {
+        height: 180px;
+        margin-bottom: 16px;
+    }
+
+    .gift-card h3 {
+        font-size: 20px;
+    }
+
+    .gift-card button {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+    .step-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .steps {
+        padding: 50px 25px;
+        border-radius: 20px;
+    }
+
+    .steps h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .step-box {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .step-box span {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .step-box p {
+        font-size: 16px;
+    }
+}
