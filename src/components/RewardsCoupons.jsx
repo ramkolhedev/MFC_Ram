@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './rewards-coupons.css'
+import './Rewards-coupons.css'
 
 const sampleUser = {
     name: 'Ram Kolhe',
